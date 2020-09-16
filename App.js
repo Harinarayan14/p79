@@ -1,15 +1,21 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import LoginScreen from './screens/SignupLoginScreen';
+import React from 'react';
+import { createAppContainer, createSwitchNavigator,} from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-export default class App extends React.Component {
-  render(){
-    return (
-      <View>
-      <LoginScreen/>
-      </View>
-    
+import LoginScreen from './screens/SignUpLoginScreen';
+import { TabNavigator } from './components/TabNavigator'
+
+
+export default function App() {
+  return (
+    <AppContainer/>
   );
 }
-}
 
+
+const switchNavigator = createSwitchNavigator({
+  WelcomeScreen:{screen: LoginScreen},
+  Tab: {screen:TabNavigator}
+})
+
+const AppContainer =  createAppContainer(switchNavigator);
