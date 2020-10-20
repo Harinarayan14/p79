@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator,} from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import LoginScreen from './screens/SignUpLoginScreen';
+import LoginScreen from './screens/SignupLoginScreen';
 import { TabNavigator } from './components/TabNavigator'
 
 
